@@ -54,12 +54,14 @@ public class FileProcessTest {
 			while ((line = br.readLine()) != null) {
 				String word = line.trim();
 				int length = word.length();
+				if(length!=0) {
 				if (length > maxLength) {
 					maxLength = length;
 					largestWords.clear();
 					largestWords.add(word);
 				} else if (length == maxLength) {
 					largestWords.add(word);
+				}
 				}
 			}
 			if (largestWords.size() > 0) {
@@ -88,35 +90,35 @@ public class FileProcessTest {
 
 		FileProcessTest testObj = new FileProcessTest();
 
-		// test case 1 -
+		// test case 1 - postitve test case
 		 System.out.println("Output for FileWithAlphaNumericWords");
 		 System.out.println("====================================");
-		 testObj.findLargestWordAndTranspose("./input/FileWithAlphaNumericWords.txt");
+		 testObj.findLargestWordsAndTranspose("./input/FileWithAlphaNumericWords.txt");
 		 System.out.println("");
 		 System.out.println("");
 
-		// test case 2
+		// test case 2 - positive test case
 		 System.out.println("Output for File With SpecialCharacter Words");
 		 System.out.println("================================");
-		 testObj.findLargestWordAndTranspose("./input/FileWithSpecialCharacterWords.txt");
+		 testObj.findLargestWordsAndTranspose("./input/FileWithSpecialCharacterWords.txt");
 		 System.out.println("");
 		 System.out.println("");
 
-		// test case 3
+		// test case 3 - negative test case
 		 System.out.println("Output for Empty File");
 		 System.out.println("==========");
-		 testObj.findLargestWordAndTranspose("./input/EmptyFile.txt");
+		 testObj.findLargestWordsAndTranspose("./input/EmptyFile.txt");
 		 System.out.println("");
 		 System.out.println("");
 
-		// test case 4
+		// test case 4 - negative test case
 		 System.out.println("Output for File Not Present In The Path");
 		 System.out.println("============================");
-		 testObj.findLargestWordAndTranspose("./input/FileNotPresent.txt");
+		 testObj.findLargestWordsAndTranspose("./input/FileNotPresent.txt");
 		 System.out.println("");
 		 System.out.println("");
 
-		// test case 5
+		// test case 5 - postitve test case
 		System.out.println("Output for File With More Than One Largest Words");
 		System.out.println("=====================================");
 		testObj.findLargestWordsAndTranspose("./input/FileWithMoreThanOneLargestWords.txt");
@@ -137,6 +139,7 @@ public class FileProcessTest {
 		System.out.println("");
 		System.out.println("");
 		
+		 
 		
 
 	}
