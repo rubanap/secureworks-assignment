@@ -1,0 +1,5 @@
+ alphabets
+ #$%^&*dfghjk
+ 1234
+ alpha1234   
+  
