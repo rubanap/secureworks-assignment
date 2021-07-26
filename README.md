@@ -16,6 +16,8 @@
   - javac com/secureworks/test/FileProcessTest.java
   - java com.secureworks.test.FileProcessTest
 
+Note: if you are executing it through any IDE please copy paste input folder outside src folder. If you are executing it from command line leave it as it as.
+
 ## Explanation
 
 In FileProcessTest.java, there are two methods written 
